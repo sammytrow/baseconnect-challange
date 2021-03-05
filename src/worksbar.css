@@ -1,0 +1,42 @@
+.worksbar{
+    float:none;
+    margin-left:auto;
+    margin-right:auto;
+    flex-direction: row;
+    align-items: center;
+    width:100%;
+    max-width:900px;
+}
+.worksbar-works{
+    float:left;
+    width:100%;
+    max-width:calc(33.33% - 30px);
+    padding:0 15px;
+    text-align:center;
+    justify-content: center;
+    color:#000;
+    font-size:14px;
+}
+.worksbar-works img.works-image{
+    width:100%;
+    height: 200px;
+    max-width:100%;
+    cursor:pointer;
+}
+.worksbar-works p.title{
+    font-size:16px;
+    font-weight:bold;
+    margin-top:30px;
+    margin-bottom: 20px;
+    cursor:pointer;
+}
+.worksbar-works p.title:hover, img.works-image:hover + p.title, .works-arrow + p.title{
+    text-decoration: underline;
+}
+.worksbar-works p{
+    margin:0;
+}
+.works-arrow{
+    margin:50px 0;
+    cursor:pointer;
+}

@@ -1,0 +1,485 @@
+.root{
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    width: 100%;
+}
+.container{
+    width:calc(100% - 60px);
+    max-width:1200px;
+    padding: 0 30px;
+    margin-left:auto;
+    margin-right:auto;
+}
+.mainPage-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding:50px 0;
+    background-color: #000B48;
+    background-size:100% auto;
+    background-position:bottom;
+    background-repeat:no-repeat;
+}
+.mainPage-header .container{
+    max-width:940px;
+    background-color:rgb(0, 11, 72, .2);
+    padding-top:10px;
+    padding-bottom:10px;
+}
+.mainPage-header .left{
+    float:left;
+    width:100%;
+    max-width:calc(30% - 22px);
+    text-align:center;
+    justify-content: center;
+    margin:20px 20px 20px 0;
+    border:#fff 1px solid;
+}
+.mainPage-header .left img{
+    width:100%;
+    max-width:130px;
+    clip-path: circle(60px at center);
+}
+.mainPage-header .profile-name{
+    font-size:22px;
+    font-weight:bold;
+}
+.mainPage-header .right{
+    float:left;
+    width:100%;
+    max-width:calc(70% - 50px);
+    margin-left:50px;
+    font-weight:lighter;
+    padding-top: 0px;
+}
+.mainPage-header .right .profile-info{
+    float:left;
+    margin-bottom:15px;
+    padding-bottom:15px;
+    border-bottom:#fff 1px solid;
+}
+.mainPage-header .right table{
+    width:100%;
+}
+.worksbar-section{
+    padding-bottom:70px;
+}
+.worksbar-section .container{
+    max-width:1000px;
+}
+.works-header{
+    width:100%;
+    text-align:center;
+    justify-content: center;
+    margin-bottom:80px;
+}
+.works-header .title{
+    width:100%;
+    color:#515151;
+    font-size:28px;
+    font-weight:bold;
+    text-transform: uppercase;
+    margin-top:120px;
+    margin-bottom:20px;
+}
+.works-header p{
+    font-size:14px;
+    margin-top:0;
+    margin-bottom:0;
+}
+.experience-section{
+    width:100%;
+    background-color:#f7f7f7;
+    padding-bottom:100px;
+    color:#515151;
+}
+.experience-section .left, .experience-section .right{
+    float:left;
+    width:100%;
+    max-width:calc(50% - 20px);
+    margin-top:100px;
+}
+.experience-section .right{
+    margin-left:40px;
+}
+.experience-section .items-container{
+    float:left;
+    width: 100%;
+    max-width:calc(100% - 35px);
+    margin-top:30px;
+    margin-left:35px;
+}
+.experience-section .title{
+    float:left;
+    width:100%;
+}
+.experience-section .title img{
+    float:left;
+    margin-top:4px;
+}
+.experience-section .title p{
+    float:left;
+    width: calc(100% - 35px);
+    color:#00a1ab;
+    font-size:14px;
+    font-weight:bold;
+    text-transform: uppercase;
+    margin:0 0 0 20px;
+    padding-bottom:10px;
+    border-bottom:#c4c4c4 1px solid
+}
+.experience-item, .education-item{
+    margin-bottom:40px;
+    font-size:16px;
+}
+.experience-item p, .education-item p{
+    margin:0;
+    padding:0;
+}
+.experience-item .title:before, .education-item .title:before{
+    float:left;
+    content: "•";
+    color:#c4c4c4;
+    font-size: 100%;
+    margin-left:-19px;
+ }
+.skills-cont{
+    float:none;
+    margin-left:auto;
+    margin-right:auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+    max-width:100%;
+}
+.skill-item{
+    float:left;
+    width:100%;
+}
+.skill-item .section-1, .skill-item .section-2,.skill-item .section-3{
+    float:left;
+    width:100%;
+    height:20px;
+    line-height:20px;
+    margin:10px 0;
+}
+.skill-item .section-1{
+    max-width:calc(55% - 70px);
+}
+.skill-item .section-2{
+    max-width:80px;
+    padding:0 20px;
+}
+.skill-item .section-3{
+    max-width:calc(45% - 70px);
+}
+.skill-item .section-2 p{
+    float:left;
+    height:20px;
+    line-height:20px;
+    margin:0;
+}
+.skill-level-blue, .skill-level-grey{
+    float:left;
+    margin-left:5px;
+    background: lightblue;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin-top:5px;
+}
+.skill-level-grey{
+    background: grey;
+}
+.charts-section-container{
+    width:100%;
+    max-width:100%;
+}
+.experience-section .charts-section-container .left{
+    width:100%;
+    max-width:40%;
+    margin-top:10px;
+}
+.experience-section .charts-section-container .right{
+    width:100%;
+    margin-left:0;
+    max-width:60%;
+    margin-top:10px;
+}
+.more-info{
+    color:#c4c4c4;
+    font-size:14px;
+    font-weight:bold;
+    margin:0;
+}
+.bar-title{
+    color:#515151;
+    font-size:18px;
+    font-weight:bold;
+}
+.bar-text{
+    font-size:16px;
+}
+.recharts-cartesian-axis-tick-line, .recharts-cartesian-axis-line{
+    display:none;
+}
+.activity-section{
+    padding-bottom:100px;
+}
+.activity-header{
+    width:100%;
+    text-align:center;
+    justify-content: center;
+    margin-bottom:80px;
+}
+.activity-header .title{
+    width:100%;
+    color:#515151;
+    font-size:28px;
+    font-weight:bold;
+    text-transform: uppercase;
+    margin-top:120px;
+    margin-bottom:20px;
+}
+.activity-header p{
+    font-size:14px;
+    margin-top:0;
+    margin-bottom:0;
+}
+.activity-section .left, .activity-section .right{
+    float:left;
+    width:calc(50% - 15px);
+}
+.activity-section .right{
+    margin-left:30px;
+}
+.activity-cont .title{
+    float:left;
+    width:100%;
+}
+.activity-cont .title img{
+    float:left;
+    margin-top:4px;
+}
+.activity-cont .title p{
+    float:left;
+    width: calc(100% - 36px);
+    color:#00a1ab;
+    font-size:14px;
+    font-weight:bold;
+    text-transform: uppercase;
+    margin:0 0 0 20px;
+    padding-bottom:10px;
+    border-bottom:#c4c4c4 1px solid
+}
+.activity-cont .items-container{
+    float:left;
+    width: 100%;
+    max-width:calc(100% - 35px);
+    margin-top:30px;
+    margin-left:35px;
+}
+.activity-cont .activity-item{
+    float:left;
+    width:calc(33.33% - 30px);
+    text-align:center;
+    justify-content: center;
+    padding:15px;
+}
+.activity-item img{
+    max-width:120px;
+    clip-path: circle(60px at center);
+    cursor: pointer;
+}
+.activity-item p{
+    cursor: pointer;
+}
+.activity-item p:hover, .activity-item img:hover + p{
+    text-decoration: underline;
+}
+.social-media-section{
+    padding:120px 0;
+    background:#f7f7f7;
+}
+.social-media-section .items-container{
+    float:none;
+    width: 100%;
+    max-width:200px;
+    margin-left:auto;
+    margin-right:auto;
+    /*margin-top:30px;*/
+}
+.social-media-section .social-media-item{
+    float:left;
+}
+.social-media-section .social-media-item img{
+    width:100%;
+    max-width:100px;
+    clip-path: circle(40px at center);
+}
+.bottom-section{
+    width:100%;
+    height:60px;
+    background:#515151;
+}
+.bottom-section img{
+    float:right;
+    margin-top:-30px;
+    margin-right:10px;
+    cursor:pointer;
+}
+/* responsive CSS */
+@media screen and (max-width: 1150px) and (min-width: 750px) {
+    .charts-section-container{
+        justify-content: center;
+    }
+    .experience-section .charts-section-container .left, .experience-section .charts-section-container .right{
+        clear:both;
+        justify-content: center;
+        max-width:100%;
+    }
+    .experience-section .charts-section-container .left{
+        float:none;
+        width:210px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .experience-section .charts-section-container .right{
+        width:100%;
+        margin-top:20px;
+    }
+}
+@media screen and (max-width: 1000px)  {
+    .activity-item img{
+        max-width:100%;
+        clip-path: circle(50% at center);
+    }
+}
+@media screen and (max-width: 950px)  {
+    .mainPage-header{
+        background-size: auto 100%;
+    }
+}
+@media screen and (max-width: 850px) and (min-width: 750px)  {
+    .worksbar-works img.works-image{
+        height:175px;
+    }
+}
+@media screen and (max-width: 750px)  {
+    .mainPage-header .container{
+        max-width:400px;
+    }
+    .mainPage-header .left, .mainPage-header .right{
+        max-width:100%;
+        margin-left:0;
+    }
+    .mainPage-header .left img{
+        float:left;
+        margin-left:35px;
+    }
+    .mainPage-header .profile-text-cont{
+        float:left;
+        margin-left:30px;
+        text-align:left;
+    }
+    .mainPage-header .profile-name, .mainPage-header .profile-title{
+        clear:both;
+    }
+    .works-header .title{
+        margin-top:70px;
+    }
+    .works-header{
+        margin-bottom:50px;
+    }
+    .mainPage .worksbar{
+        max-width:300px;
+    }
+    .worksbar-works{
+        max-width:100%;
+        padding:0;
+    }
+    .worksbar-section{
+        padding-bottom:20px;
+    }
+    .experience-section{
+        padding-bottom:50px;
+    }
+    .experience-section .left, .experience-section .right{
+        max-width: 100%;
+        margin:50px 0 0 0;
+    }
+    .activity-section{
+        padding-bottom:50px;
+    }
+    .activity-header .title{
+        margin-top: 70px;
+    }
+    .activity-section .left, .activity-section .right{
+        width:100%;
+        max-width: 100%;
+        margin-left:0;
+    }
+    .activity-section .right{
+        margin-top:50px;
+    }
+}
+@media screen and (max-width: 575px){
+    .charts-section-container{
+        justify-content: center;
+    }
+    .experience-section .charts-section-container .left, .experience-section .charts-section-container .right{
+        clear:both;
+        justify-content: center;
+        max-width:100%;
+    }
+    .experience-section .charts-section-container .left{
+        float:none;
+        width:210px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .experience-section .charts-section-container .right{
+        width:100%;
+        margin-top:20px;
+    }
+}
+@media screen and (max-width: 500px){
+    .experience-section .title img, .experience-item .title:before, .education-item .title:before{
+        display:none;
+    }
+    .experience-section .title p{
+        width:100%;
+        margin-left:0;
+    }
+    .experience-section .items-container{
+        max-width:100%;
+        margin-left:0;
+    }
+}
+@media screen and (max-width: 450px){
+    .mainPage-header .left img{
+        float:none;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .mainPage-header .profile-text-cont{
+        width:100%;
+        text-align:center;
+        margin-left:0;
+    }
+}
+@media screen and (max-width: 400px){
+    .skill-item .section-1{
+        max-width:calc(100% - 140px);
+    }
+    .skill-item .section-2{
+        max-width:80px;
+        padding:0 20px;
+    }
+    .skill-item .section-3{
+        max-width:100%;
+    }
+}

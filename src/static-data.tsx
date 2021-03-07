@@ -1,11 +1,15 @@
+/* contains all static data for the website */
 let personalInformation = {
     name: 'Sam Trowbridge',
     intro: {
         jobTitle: 'Front End Engineer',
         nameJap:'トローブリッジ:サム',
         image: 'images/small_profile.jpg',
-        text1: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
-        address: '123 barney street',
+        text1: 'Apprentice, Junior Developer, Front End Developer, Part Time Front End Developer, Information Management, Assistant Language Teacher.',
+        address: 'Kobe stockers,\n' + 
+        'Kobe-shi Chuo-ku,\n' + 
+        'Kitano-cho 3-15-12,\n' + 
+        '650-0002',
         dateOfBirth: '1992/10/05'
     },
     works:[
@@ -63,7 +67,7 @@ let personalInformation = {
                     },
                     {
                         text_title: 'Result',
-                        text: 'In this project I used HTML, CSS, Javascript, PHP and SQL. My contribution consisted of front end development and product insertion, To make the product creation as painless as possible we used excel sheets and a plugin we developed to allow mass creation. This included the creation and organisation of the database, as well as an online admin system that we also developed to allow the clients to update/add new products in the database./n/n' +
+                        text: 'In this project I used HTML, CSS, Javascript, PHP and SQL. My contribution consisted of front end development and product insertion, To make the product creation as painless as possible we used excel sheets and a plugin we developed to allow mass creation. This included the creation and organisation of the database, as well as an online admin system that we also developed to allow the clients to update/add new products in the database.' +
                         'This was a very large and time consuming project, we spent a large amount of time ensuring products were correctly uploaded and displayed. The final product has over 5000 products, which also consist of a huge collection of categories, subcategories and cross correlation.'
                     }
                 ]
@@ -104,54 +108,40 @@ let personalInformation = {
             id:0,
             langName:'HTML/CSS',
             level:4,
-            libraries:'test, test2'
+            libraries:''
         },
         {
             id:1,
             langName:'PHP',
             level:3,
-            libraries:'test, test2'
-        }
-        ,
+            libraries:''
+        },
         {
             id:2,
             langName:'Javascript',
             level:3,
-            libraries:'test, test2'
+            libraries:'Jquery, React, Typescript'
         },
         {
             id:3,
             langName:'Python',
             level:3,
-            libraries:'test, test2'
+            libraries:'Kivy, Tensorflow'
         },
         {
             id:4,
-            langName:'React/Typescript',
-            level:2,
-            libraries:'test, test2'
+            langName:'Wordpress',
+            level:4,
+            libraries:''
         },
         {
             id:5,
-            langName:'Wordpress',
-            level:4,
-            libraries:'test, test2'
+            langName:'C/C++/C#',
+            level:2,
+            libraries:''
         },
         {
             id:6,
-            langName:'Tensorflow',
-            level:1,
-            libraries:'test, test2'
-        },
-        {
-            id:7,
-            langName:'C/C++/C#',
-            level:2,
-            libraries:'test, test2'
-        }
-        ,
-        {
-            id:8,
             langName:'After Effects',
             level:2,
             libraries:''
@@ -166,7 +156,7 @@ let personalInformation = {
         {
             title:'Conscientiousness',
             percentage:67,
-            infoText:'A high score means: Conscientious • disciplined • efficient • well organised • likes precise detail • strong sense of duty • (Very High scorers could be described as workaholics'
+            infoText:'A high score means: Conscientious • disciplined • efficient • well organised • likes precise detail • strong sense of duty'
         },
         {
             title:'Extraversion',
@@ -202,7 +192,7 @@ let personalInformation = {
                 text:'Kerrang'
             }
         ],
-        aboutMe:''
+        aboutMe:'I have a very kind relaxed personality and love to learn new things, I really enjoy being presented with a new challenge to get stuck into. My interests are many but my top three would most likely consist of music, travelling and games. What I like most about music is that there is a genre for almost every scenario, also it helps me in many situations such as focusing on a particularly difficult task, dealing with stress and connecting with other people. The most enjoyable part of travelling is learning about the many different cultures and their ways of life. In recent years I’ve found less and less time for games however I still really enjoy relaxing to a good game.'
         },
     socialMedia:[
         {
@@ -215,4 +205,5 @@ let personalInformation = {
         }
     ]
 };
+
 export{personalInformation};

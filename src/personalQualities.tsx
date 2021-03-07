@@ -6,16 +6,20 @@ import { PieChart, Pie, Sector, Cell, ResponsiveContainer,  ComposedChart,
     
 import {personalInformation} from './static-data';
 
-let totalPercentage:number = 0;
-
+/* bar chart data array */
 var data:any[] = [];
+/* pie chart data array this is a 2 dimentional array for positive value and negative */
 var data2:any[]= [];
+
+/* loops throught all static-data personalQualities and places them into the data arrays*/
 for(var i=0;i<personalInformation.personalQualities.length;i++){
+
     data[i] = {
       name:personalInformation.personalQualities[i].title,
       uv:(100 - personalInformation.personalQualities[i].percentage),
       pv:personalInformation.personalQualities[i].percentage
     }
+
     data2[i] = [{
       name:'Negative',
       value:(100 - personalInformation.personalQualities[i].percentage)
@@ -24,19 +28,19 @@ for(var i=0;i<personalInformation.personalQualities.length;i++){
       name:personalInformation.personalQualities[i].title,
       value:personalInformation.personalQualities[i].percentage
     }];
-    
-    totalPercentage += personalInformation.personalQualities[i].percentage;
 }
 
 interface Chart {
   chartDisplayed:number,
   onChartChange:any
 }
+/* pie chart colours */
 const COLORS = ['#515151', '#18acb2'];
-
+/* pulls all chart data together into one display container */
 const PersonalQualities = () => {
+    /* this useState is used to change the pie chart being displayed*/
     const [chartDisplayed, setChartDisplayed] = useState<number>(0);
-    var test = 0;
+
     return (
       <div className='charts-section-container'>
         <p className='more-info'>Click a bar for more details</p>
@@ -58,8 +62,7 @@ const PersonalQualities = () => {
                 <XAxis display='none' type="number" />
                 <YAxis width={90} tick={{fontSize: 12}} dataKey="name" type="category" scale="band" />
                 <Bar dataKey="pv" stackId="a" barSize={20} fill="#18acb2" label={renderCustomizedLabel}>
-                    {
-                      data.map((entry, index) => {
+                    {data.map((entry, index) => {
                         return(<Cell style={{ cursor: 'pointer' }} key={`cell-${index}`}  onClick={function(){ setChartDisplayed(index)}} stroke='#515151'  strokeWidth={1}/>)
                     })}
                 </Bar>
@@ -69,10 +72,8 @@ const PersonalQualities = () => {
         </div>
       </div>
     );
-    //<Bar dataKey="pv" stackId="a" barSize={20} fill="#413ea0" label/>
-  
 }
-
+/* This displays the value on the end of the bar */
 const renderCustomizedLabel = (props: any) => {
   const { x, y, width, value } = props;
   const radius = 10;
@@ -91,6 +92,7 @@ const renderCustomizedLabel = (props: any) => {
     </g>
   );
 };
+/* displays the pie chart and information of a particular quality, when a bar is clicked it will update to that bar data */
 const DisplayPieChart: React.FC<Chart> = ({chartDisplayed, onChartChange}) =>{
   return(
     <div>
@@ -132,31 +134,5 @@ const DisplayPieChart: React.FC<Chart> = ({chartDisplayed, onChartChange}) =>{
       </div>
     </div>)
 };
-/*<PieChart>
-              <g>
-                <text
-                  x={111}
-                  y={114}
-                  fill="#000"
-                  textAnchor="middle"
-                  dominantBaseline="center"
-                  style={{fontSize: 20}}
-                >
-                  {data3[1].value}%
-                </text>
-              </g>
-              <Pie
-                data={data3}
-                cx={100}
-                cy={100}
-                innerRadius={60}
-                outerRadius={80}
-                fill="#8884d8"
-                paddingAngle={5}
-                dataKey="value"
-              >
-                {data.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                ))}
-              </Pie>*/
-              export default PersonalQualities;
+
+export default PersonalQualities;

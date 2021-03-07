@@ -10,12 +10,13 @@ interface Props {
     setWorksDisplayed: any,
     worksDisplayed?:number
   }
+/* brings all the content together to form the workspage */
 const WorksPage: React.FC<Props> = ({worksDisplayed, setWorksDisplayed, onTabChange}) =>{
     let worksDetails = personalInformation.works[worksDisplayed!]    
     return (<div className='works-page'>
         <div className='breadcrums-section'>
             <div className='container'>
-                <img onClick={function(){ onTabChange('index'); setWorksDisplayed()}}className='arrow' src='images/works-arrow.png'/>
+                <img onClick={function(){ onTabChange('index'); setWorksDisplayed()}} className='arrow' src='images/works-arrow.png'/>
                 <p onClick={function(){ onTabChange('index'); setWorksDisplayed()}} className='title'>{personalInformation.name}</p>
             </div>
         </div>
@@ -23,7 +24,7 @@ const WorksPage: React.FC<Props> = ({worksDisplayed, setWorksDisplayed, onTabCha
             <div className='container'>
                 <div className='works-header'>
                     <p className='title'>Works</p>
-                    <p className='sub_title'>blah blah blah</p>
+                    <p className='sub_title'>制作実績など</p>
                 </div>
                 <div className='work-details-cont'>
                     <div className='image-cont'>
@@ -45,6 +46,7 @@ const WorksPage: React.FC<Props> = ({worksDisplayed, setWorksDisplayed, onTabCha
     </div>
         );
 }
+/* gets all images from static-data and returns them in an arranged layout */
 const GetImages = ({worksimages}:{worksimages:string[]}) =>{
     let getimages = [];
     let count = true;
@@ -66,6 +68,7 @@ const GetImages = ({worksimages}:{worksimages:string[]}) =>{
     { getimages.map(getimages => <span>{ getimages }</span>) }
   </div>);
 }
+/* gets text from static-data and returns them in an arranged layout */
 const GetText = ({workstext}:{workstext:{ text_title: string; text: string; }[]}) =>{
     let gettext = [];
     let textMargin = ''
@@ -82,16 +85,5 @@ const GetText = ({workstext}:{workstext:{ text_title: string; text: string; }[]}
     { gettext.map(gettext => <span>{ gettext }</span>) }
   </div>)
 }
-/*{personalInformation.works[worksDisplayed].map(works =>{
-                            if(count){
-                                return (<div className='left'>
-                                    <img src=''></img>
-                                </div>)}
-                            if(!count){
-                            return (<div className='right'>
-                                <img></img>
-                            </div>)}
-                        })}*/
 
-//skipWorksID = {worksID}
 export default WorksPage;

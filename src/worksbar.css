@@ -23,14 +23,16 @@
     max-width:100%;
     cursor:pointer;
 }
-.worksbar-works p.title{
+
+/*.worksbar-works p.title{
     font-size:16px;
     font-weight:bold;
     margin-top:30px;
     margin-bottom: 20px;
     cursor:pointer;
 }
-.worksbar-works p.title:hover, img.works-image:hover + p.title, .works-arrow + p.title{
+.worksbar-works p.title:hover, */
+img.works-image:hover + p.title, .works-arrow + p.title{
     text-decoration: underline;
 }
 .worksbar-works p{
@@ -39,4 +41,15 @@
 .works-arrow{
     margin:50px 0;
     cursor:pointer;
+}
+@media screen and (max-width: 850px) and (min-width: 750px)  {
+    .worksbar-works img.works-image{
+        height:175px;
+    }
+}
+@media screen and (max-width: 750px)  {
+    .worksbar-works{
+        max-width:100%;
+        padding:0;
+    }
 }

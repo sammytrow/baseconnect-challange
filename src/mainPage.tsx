@@ -1,13 +1,15 @@
 import React from 'react';
 import {personalInformation} from './static-data';
+import PersonalQualities from './personalQualities';
 import WorksBar from './worksBar';
 import Skills from './skills';
-import PersonalQualities from './personalQualities';
 import './mainPage.css';
+
 interface Props {
     onTabChange:any,
     setWorksDisplayed:any
   }
+/* pulls all the sections into one function to be called by the content function */
 const MainPage: React.FC<Props> = ({onTabChange, setWorksDisplayed}) => {
     return (
     <div className='mainPage'>
@@ -25,8 +27,15 @@ const MainPage: React.FC<Props> = ({onTabChange, setWorksDisplayed}) => {
                     <p className='profile-jap-name'>{personalInformation.intro.nameJap}</p>
                     <table>
                         <tr>
-                            <td><b>Address</b></td>
-                            <td>{personalInformation.intro.address}</td>
+                            <td className='profile-address'><b>Address</b></td>
+                            <td>{personalInformation.intro.address.split('\n').map(function(item, key) {
+                                return (
+                                    <span key={key}>
+                                    {item}
+                                    <br/>
+                                    </span>
+                                )
+                            })}</td>
                         </tr>
                         <tr>
                             <td><b>Date of birth</b></td>
@@ -41,7 +50,7 @@ const MainPage: React.FC<Props> = ({onTabChange, setWorksDisplayed}) => {
             <div className='container'>
                 <div className='works-header'>
                     <p className='title'>Works</p>
-                    <p className='sub_title'>japanese</p>
+                    <p className='sub_title'>制作実績など</p>
                 </div>
                 <WorksBar onTabChange = {onTabChange} setWorksDisplayed = {setWorksDisplayed} />
                 <div style={{clear:'both'}}></div>
@@ -56,21 +65,15 @@ const MainPage: React.FC<Props> = ({onTabChange, setWorksDisplayed}) => {
                         <p>Experience</p>
                     </div>
                     <div className='items-container'>
-                        {personalInformation.experience.map((experience, index) =>{
-                            /*let borderStyle = {
-                                "border-left":'#c4c4c4 1px solid',
-                            } as React.CSSProperties;
-                            if(index + 1 == personalInformation.experience.length){
-                                borderStyle = {
-                                    "border-left":'none',
-                                } as React.CSSProperties;;
-                            }*/
+                        {/* calls each experience element in the static-data and returns them in an arranged layout */
+                        personalInformation.experience.map((experience, index) =>{
                             return (<div className='experience-item'>
                                 <p className='title'><b>{experience.companyName} | {experience.date}</b></p>
                                 <p>{experience.position}</p>
                                 <p>{experience.moreInfo}</p>
                             </div>)
-                        })}
+                        })
+                        }
                     </div>
                 </div>
                 <div className='right'>
@@ -79,13 +82,15 @@ const MainPage: React.FC<Props> = ({onTabChange, setWorksDisplayed}) => {
                         <p>Education</p>
                     </div>
                     <div className='items-container'>
-                        {personalInformation.education.map(education =>{
+                        {/* calls each education element in the static-data and returns them in an arranged layout */
+                        personalInformation.education.map(education =>{
                             return (<div className='education-item'>
                                 <p className='title'><b>{education.schoolName} | {education.date}</b></p>
                                 <p>{education.subject}</p>
                                 <p>{education.moreInfo}</p>
                             </div>)
-                        })}
+                        })
+                        }
                     </div>
                 </div>
                 <div style={{clear:'both'}}></div>
@@ -114,19 +119,20 @@ const MainPage: React.FC<Props> = ({onTabChange, setWorksDisplayed}) => {
             <div className='container'>
                 <div className='activity-header'>
                     <p className='title'>Activity</p>
-                    <p className='sub_title'>japanese</p>
+                    <p className='sub_title'>活動</p>
                 </div>
                 <div className='activity-cont'>
                     <div className='left'>
-                        <div className='title'>
+                        <div className='title_cont'>
                             <img src='images/about_me_thumbnail.png'/>
                             <p className='title'>About me</p>
+                            <p className='text'>{personalInformation.activity.aboutMe}</p>
                         </div>
                     </div>
                     <div className='right'>
-                        <div className='title'>
+                        <div className='title_cont'>
                             <img src='images/interests_thumbnail.png'/>
-                            <p>Interests</p>
+                            <p className='title'>Interests</p>
                         </div>
                         <div className='items-container'>
                             {personalInformation.activity.pages.map((pages:any) =>{
@@ -161,11 +167,5 @@ const MainPage: React.FC<Props> = ({onTabChange, setWorksDisplayed}) => {
     </div>
     );
 };
-//<WorksBar works={works} changeWorks={changeWorks}/>
-
-//mainPage.propTypes = {
-//    works: PropTypes.array.isRequired,
-//    changeWorks: PropTypes.func.isRequired
-//}
 
 export default MainPage;

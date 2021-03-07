@@ -1,3 +1,14 @@
+/*
+    1. Header
+    2. Workbar
+    3. Experience
+    4. Skill
+    5. Charts
+    6. Activity
+    7. Social
+    8. Bottom
+    9. Responsive
+*/
 .root{
     margin: 0 0 0 0;
     padding: 0 0 0 0;
@@ -10,6 +21,7 @@
     margin-left:auto;
     margin-right:auto;
 }
+/* 1. Header */
 .mainPage-header {
     display: flex;
     flex-direction: column;
@@ -60,9 +72,26 @@
     padding-bottom:15px;
     border-bottom:#fff 1px solid;
 }
+.mainPage-header .right .profile-jap-name{
+    margin-bottom:0;
+}
+.mainPage-header .right tr{
+    float: left;
+    width: 100%;
+    margin-top:10px;
+}
+.mainPage-header .right td{
+    float: left;
+    width: 49%;
+}
+.mainPage-header .right .profile-address{
+    vertical-align: top;
+    margin-bottom: 10px;
+}
 .mainPage-header .right table{
     width:100%;
 }
+/* 2. Workbar */
 .worksbar-section{
     padding-bottom:70px;
 }
@@ -89,6 +118,7 @@
     margin-top:0;
     margin-bottom:0;
 }
+/* 3. Experience */
 .experience-section{
     width:100%;
     background-color:#f7f7f7;
@@ -145,6 +175,7 @@
     font-size: 100%;
     margin-left:-19px;
  }
+ /* 4. Skill */
 .skills-cont{
     float:none;
     margin-left:auto;
@@ -163,18 +194,19 @@
     float:left;
     width:100%;
     height:20px;
+    font-size:14px;
     line-height:20px;
     margin:10px 0;
 }
 .skill-item .section-1{
-    max-width:calc(55% - 70px);
+    max-width:calc(50% - 70px);
 }
 .skill-item .section-2{
     max-width:80px;
     padding:0 20px;
 }
 .skill-item .section-3{
-    max-width:calc(45% - 70px);
+    max-width:calc(50% - 70px);
 }
 .skill-item .section-2 p{
     float:left;
@@ -194,6 +226,7 @@
 .skill-level-grey{
     background: grey;
 }
+/* 5. Charts */
 .charts-section-container{
     width:100%;
     max-width:100%;
@@ -226,6 +259,7 @@
 .recharts-cartesian-axis-tick-line, .recharts-cartesian-axis-line{
     display:none;
 }
+/* 6. Activity */
 .activity-section{
     padding-bottom:100px;
 }
@@ -256,15 +290,15 @@
 .activity-section .right{
     margin-left:30px;
 }
-.activity-cont .title{
+.activity-cont .title_cont{
     float:left;
     width:100%;
 }
-.activity-cont .title img{
+.activity-cont .title_cont img{
     float:left;
     margin-top:4px;
 }
-.activity-cont .title p{
+.activity-cont .title_cont .title{
     float:left;
     width: calc(100% - 36px);
     color:#00a1ab;
@@ -274,6 +308,16 @@
     margin:0 0 0 20px;
     padding-bottom:10px;
     border-bottom:#c4c4c4 1px solid
+}
+.activity-cont .title_cont .text{
+    float: left;
+    width: 100%;
+    max-width: calc(100% - 35px);
+    margin-top: 30px;
+    margin-left: 35px;
+    color:#515151;
+    font-size:14px;
+    font-weight: normal;
 }
 .activity-cont .items-container{
     float:left;
@@ -300,6 +344,7 @@
 .activity-item p:hover, .activity-item img:hover + p{
     text-decoration: underline;
 }
+/* 7. Social */
 .social-media-section{
     padding:120px 0;
     background:#f7f7f7;
@@ -319,7 +364,9 @@
     width:100%;
     max-width:100px;
     clip-path: circle(40px at center);
+    cursor: pointer;
 }
+/* 8. Bottom */
 .bottom-section{
     width:100%;
     height:60px;
@@ -331,8 +378,8 @@
     margin-right:10px;
     cursor:pointer;
 }
-/* responsive CSS */
-@media screen and (max-width: 1150px) and (min-width: 750px) {
+/* 9. Responsive */
+@media screen and (max-width: 1150px) and (min-width: 800px) {
     .charts-section-container{
         justify-content: center;
     }
@@ -363,9 +410,24 @@
         background-size: auto 100%;
     }
 }
-@media screen and (max-width: 850px) and (min-width: 750px)  {
-    .worksbar-works img.works-image{
-        height:175px;
+@media screen and (max-width: 800px)  {
+    .experience-section .left, .experience-section .right{
+        max-width: 100%;
+        margin:50px 0 0 0;
+    }
+    .activity-section{
+        padding-bottom:50px;
+    }
+    .activity-header .title{
+        margin-top: 70px;
+    }
+    .activity-section .left, .activity-section .right{
+        width:100%;
+        max-width: 100%;
+        margin-left:0;
+    }
+    .activity-section .right{
+        margin-top:50px;
     }
 }
 @media screen and (max-width: 750px)  {
@@ -397,33 +459,11 @@
     .mainPage .worksbar{
         max-width:300px;
     }
-    .worksbar-works{
-        max-width:100%;
-        padding:0;
-    }
     .worksbar-section{
         padding-bottom:20px;
     }
     .experience-section{
         padding-bottom:50px;
-    }
-    .experience-section .left, .experience-section .right{
-        max-width: 100%;
-        margin:50px 0 0 0;
-    }
-    .activity-section{
-        padding-bottom:50px;
-    }
-    .activity-header .title{
-        margin-top: 70px;
-    }
-    .activity-section .left, .activity-section .right{
-        width:100%;
-        max-width: 100%;
-        margin-left:0;
-    }
-    .activity-section .right{
-        margin-top:50px;
     }
 }
 @media screen and (max-width: 575px){
@@ -447,14 +487,14 @@
     }
 }
 @media screen and (max-width: 500px){
-    .experience-section .title img, .experience-item .title:before, .education-item .title:before{
+    .experience-section .title img, .experience-item .title:before, .education-item .title:before, .activity-cont .title_cont img{
         display:none;
     }
-    .experience-section .title p{
+    .experience-section .title p, .activity-cont .title_cont .title{
         width:100%;
         margin-left:0;
     }
-    .experience-section .items-container{
+    .experience-section .items-container, .activity-cont .title_cont .text, .activity-cont .items-container{
         max-width:100%;
         margin-left:0;
     }
